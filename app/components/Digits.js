@@ -70,7 +70,7 @@ export const Digits1 = ({digit}) => {
   time.minute[1] === undefined ? time.minute = "0" + time.minute : ""
   return (
     <>
-      <div className="mx-5">
+      <div className="">
         <div className="flex gap-x-2 ">
           <span className={`${second === 16 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "2" || time.minute[1] === "3" || time.minute[1] === "4" || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "7" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[0]}</span>
           <span className={`${second === 21 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "1" || time.minute[1] === "2" || time.minute[1] === "3" || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "7" || time.minute[1] === "8" || time.minute[1] === "9"? "text-blue-500" : "deactivate"} `}>{digit[5]}</span>
@@ -80,6 +80,7 @@ export const Digits1 = ({digit}) => {
           <span className={`${second === 17 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "1" || time.minute[1] === "4" || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[1]}</span>
           <span className={`${second === 22 ? "text-red-500" : time.minute[1] === "1" ? "text-blue-500" : "deactivate"}`}>{digit[6]}</span>
           <span className={`${second === 27 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "2" || time.minute[1] === "3" || time.minute[1] === "4"  || time.minute[1] === "7" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[11]}</span>
+          <div className={`mx-5 h-3 w-3 ${second%2 === 0 ? "border-blue-600 bg-blue-600" : ""} `}></div>
         </div>
         <div className="flex gap-x-2">
           <span className={`${second === 18 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "2" || time.minute[1] === "3" || time.minute[1] === "4" || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[2]}</span>
@@ -90,12 +91,15 @@ export const Digits1 = ({digit}) => {
           <span className={`${second === 19 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "2" || time.minute[1] === "6" || time.minute[1] === "8" ? "text-blue-500" : "deactivate"}`}>{digit[3]}</span>
           <span className={`${second === 24 ? "text-red-500" : time.minute[1] === "1" || time.minute[1] === "7" ? "text-blue-500" : "deactivate"}`}>{digit[8]}</span>
           <span className={`${second === 29 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "8" || time.minute[1] === "3" || time.minute[1] === "4"  || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[13]}</span>
+          <div className={`mx-5 h-3 w-3 ${second%2 === 0 ? "border-blue-600 bg-blue-600" : ""} `}></div>
         </div>
         <div className="flex gap-x-2">
           <span className={`${second === 20 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "2" || time.minute[1] === "3"  || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[4]}</span>
           <span className={`${second === 25 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "1" || time.minute[1] === "2" || time.minute[1] === "3"  || time.minute[1] === "5" || time.minute[1] === "6"  || time.minute[1] === "7" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[9]}</span>
           <span className={`${second === 30 ? "text-red-500" : time.minute[1] === "0" || time.minute[1] === "2" || time.minute[1] === "3" || time.minute[1] === "4"  || time.minute[1] === "5" || time.minute[1] === "6" || time.minute[1] === "8" || time.minute[1] === "9" ? "text-blue-500" : "deactivate"} `}>{digit[14]}</span>
+          
         </div>
+        
       </div>
     </>
   );
